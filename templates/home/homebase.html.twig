@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="{%block description %} CIAME Burkina{% endblock %}">
+		<meta name="keywords" content="{%block keywords %} Cabinet, Assistance, Micros, Entreprises{% endblock %}">
+		<meta name="author" content="CIAME Burkina">
+
+
+		{% block head %}
+			{% include ("home/head.html.twig") %}
+		{% endblock %}
+		{% block stylesheet %}{% endblock %}
+
+	</head>
+	<body>
+		{% block nav %}
+			{% include ("home/nav.html.twig") %}
+		{% endblock %}
+
+		{% block header %}
+			{% include ("home/header.html.twig") %}
+		{% endblock %}
+
+		{% block body %}{% endblock %}
+		{% block footer %}
+			{% include ("home/footer.html.twig") %}
+		{% endblock %}
+		{% block javascriptsx %}
+			{% include ("home/javascript.html.twig") %}
+		{% endblock %}
+
+	</body>
+</html>

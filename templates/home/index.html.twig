@@ -1,0 +1,241 @@
+{% extends 'home/homebase.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	<!-- Services Section-->
+	<section class="services" id="services">
+		<h1>Nos Services</h1>
+		<div class="container">
+			<div class="service">
+				<span class="material-icons-sharp">devices</span>
+				<h3>Services du Numérique</h3>
+				<ul>
+					<li>Développement web & mobile</li>
+					<li>Conception de bases de données</li>
+					<li>Sécurisation d'actifs SI</li>
+					<li>Markéting digital</li>
+					<li>Formation</li>
+				</ul>
+			</div>
+			<!-- ============== END OF SERVICE ============== -->
+
+			<div class="service">
+				<span class="material-icons-sharp">manage_history</span>
+				<h3>Gestion d'Entreprises</h3>
+				<ul>
+					<li>Création d'entreprises</li>
+					<li>Manuels de procédures</li>
+					<li>Business Plan</li>
+					<li>Gestion de stocks</li>
+					<li>Formation</li>
+				</ul>
+			</div>
+			<!-- ============== END OF SERVICE ============== -->
+
+			<div class="service">
+				<span class="material-icons-sharp">local_activity</span>
+				<h3>Formation</h3>
+				<ul>
+					<li>Bases du web: HTML, CSS, JS</li>
+					<li>Bases de données: Oracle, MySQL</li>
+					<li>Bureautique et Infographie</li>
+					<li>Management, Politiques économiques</li>
+					<li>Divers</li>
+				</ul>
+			</div>
+			<!-- ============== END OF SERVICE ============== -->
+
+			<div class="service">
+				<span class="material-icons-sharp">settings_suggest</span>
+				<h3>Prestations Diverses</h3>
+				<ul>
+					<li>Fournitures de bureau</li>
+					<li>Fournitures de matériels informatiques</li>
+					<li>Etudes et Politiques
+					</li>
+					<li>Réseaux et Sécurité Informatique</li>
+					<li>Divers</li>
+				</ul>
+			</div>
+
+		</div>
+	</section>
+	<!-- ============== END OF Services Section ============== -->
+
+	<!-- Recent-work Section-->
+	<section class="recent-work" id="portfolio">
+		<h1>nos différentes prestations</h1>
+		<div class="container">
+			<div class="projects">
+				<div class="project">
+					<h3>Conception d'application de gestion</h3>
+					<div class="thubmnail">
+						<img src="{{asset('assets') }}/img/inventory.jpg" alt="">
+					</div>
+					<p>Passer d'une gestion manuelle ou traditionnelle et mettre en place une solution informatisée,
+																																				                        afin de disposer d'un tableau de bord de suivi de vos
+																																				                        activités.
+					</p>
+				</div>
+				<!-- ============== END OF PROJECT ============== -->
+			</div>
+			<!-- ============== END OF PROJECTS ============== -->
+
+			<div class="projects">
+				<div class="project">
+					<h3>Développement d'API et de Services Web</h3>
+					<div class="thubmnail">
+						<img src="{{asset('assets') }}/img/apisw.jpg" alt="">
+					</div>
+					<p>Assurer une connexion de vos applications informatiques et garantir une haute disponibilité de
+																																				                        vos données.</p>
+				</div>
+				<!-- ============== END OF PROJECT ============== -->
+			</div>
+			<!-- ============== END OF PROJECTS ============== -->
+
+			<div class="projects">
+				<div class="project">
+					<h3>Conduite rationnelle axée sur les règles de sécurité</h3>
+					<div class="thubmnail">
+						<img src="{{asset('assets') }}/img/cardriving.jpg" alt="">
+					</div>
+					<p>La conduite rationnelle axée sur les règles de sécurité ; un thème d’actualité qui cadre
+																																				                        parfaitement symbiose avec la déontologie du métier de chauffeur, la règlementation de
+																																				                        l’utilisation des véhicules de l’Etat et en lien étroit avec la situation sécuritaire que
+																																				                        traverse notre pays</p>
+				</div>
+				<!-- ============== END OF PROJECT ============== -->
+			</div>
+			<!-- ============== END OF PROJECTS ============== -->
+
+			<div class="projects">
+				<div class="project">
+					<h3>Concevoir et rédiger des documents administratifs</h3>
+					<div class="thubmnail">
+						<img src="{{asset('assets') }}/img/secretariat.jpg" alt="">
+					</div>
+					<p>Définir les concepts liés à de l’accueil, à la communication et aux informations en matière de
+																																				                        sécurité, et établir un diagnostic sur l’accueil en vue d’apporter des solutions aux
+																																				                        dysfonctionnements éventuellement constatés et de proposer des améliorations ;</p>
+				</div>
+				<!-- ============== END OF PROJECT ============== -->
+			</div>
+			<!-- ============== END OF PROJECTS ============== -->
+		</div>
+	</section>
+	<!-- ============== END OF PORTFOLIO ============== -->
+
+	<!-- About Section-->
+	<section class="about" id="about">
+		<h1>A propos</h1>
+		<div class="container">
+			<div class="image">
+				<img src="{{asset('assets') }}/img/ciame-entrepreneur.jpg" alt="">
+			</div>
+			<div class="info">
+				<p>
+					<strong>Nous</strong>
+					<ul>
+						<li>Analyse de système d’information ...</li>
+						<li>Conception, développement et mise en œuvre...</li>
+						<li>Suivi et formation des utilisateurs ...</li>
+					</ul>
+					<br>
+					<strong>Nos atouts</strong>
+					<ul>
+						<li>Une expertise reconnue : nos nombreuses actions au profit de nos partenaires ont affuté
+																																										                        notre maitrise des différents outils utiles pour relever vos défis.</li>
+						<li>Une créativité sans pareil : elle nous rend unique, efficace et audacieuse, notre approche
+																																										                        dans la mise en œuvre de vos projets.</li>
+						<li>Une probité sans équivoque : la droiture et la rigueur envers nous-mêmes et nos partenaires,
+																																										                        déterminent notre principale stratégie dans la réalisation de vos projets.</li>
+						<li>Une approche innovante : diagnostic et cadrage, conseil et accompagnement, conduite au
+																																										                        changement.</li>
+					</ul>
+				</p>
+
+
+				<div class="read-more-content">
+					<p>
+						<strong>Nos atouts</strong>
+						<ul>
+							<li>Une expertise reconnue : nos nombreuses actions au profit de nos partenaires ont affuté
+																																																                            notre maitrise des différents outils utiles pour relever vos défis.</li>
+							<li>Une créativité sans pareil : elle nous rend unique, efficace et audacieuse, notre approche
+																																																                            dans la mise en œuvre de vos projets.</li>
+							<li>Une probité sans équivoque : la droiture et la rigueur envers nous-mêmes et nos partenaires,
+																																																                            déterminent notre principale stratégie dans la réalisation de vos projets.</li>
+							<li>Une approche innovante : diagnostic et cadrage, conseil et accompagnement, conduite au
+																																																                            changement.</li>
+						</ul>
+					</p>
+
+
+				</div>
+				<a href="read-more">Lire plus</a>
+				<a href="{{asset('assets') }}/img/offre.pdf">
+					<i class="uil uil-download-alt"></i>Télécharger notre offre</a>
+			</p>
+		</div>
+	</div>
+</section>
+<!-- END OF Section-->
+
+<section class="blog" id="blog">
+	<h1>Notre Catalogue</h1>
+	<div class="container">
+		<article>
+			<h5 class="date">20 Avril</h5>
+			<h4>Maitrisez les fondamentaux HTML et CSS</h4>
+			<div class="thubmnail">
+				<img src="{{asset('assets') }}/img/apprendre-html-et-css.jpg" alt="">
+			</div>
+			<p>Vous voulez faire un saut dans le développement de site ou d'application web. HTML et CSS sont les
+																								                    bases que vous devez maitriser...</p>
+			<a href="read-more" class="register">S'inscrire</a>
+		</article>
+		<article>
+			<h5 class="date">20 Avril</h5>
+			<h4>Maitrisez la gestion de vos stocks</h4>
+			<div class="thubmnail">
+				<img src="{{asset('assets') }}/img/Inventory Stock.png" alt="">
+			</div>
+			<p>Avoir une idée sur votre stock pour mieux le suivre. Cette formation est adressée aux magasiniers,
+																								                    gestionnaires de stock et logisticiens ...</p>
+			<a href="read-more" class="register">S'inscrire</a>
+		</article>
+		<article>
+			<h5 class="date">20 Avril</h5>
+			<h4>Bureautique et Infographie</h4>
+			<div class="thubmnail">
+				<img src="{{asset('assets') }}/img/infographie.jpg" alt="">
+			</div>
+			<p>Vous voulez mieux vendre vos activités, et mieux servir vos clients, nous vous garatissons à travers
+																								                    la formation proposée ...</p>
+			<a href="read-more" class="register">S'inscrire</a>
+		</article>
+	</div>
+
+</section>
+
+<!-- Contact Section-->
+<section class="contact" id="contact">
+	<div class="overlay">
+		<div class="container">
+			<h1>Contact</h1>
+			<p>Ecrivez nous ici et laissez nous connaître vos sujets d'intérêt. Nos experts prendrons contact avec
+																								                    vous pour un solutionnement adéquat.</p>
+			<form>
+				<input type="text" name="Name" placeholder="Nom" required>
+				<input type="email" name="Email" placeholder="Email" required>
+				<input type="text" name="Subject" placeholder="Sujet" required>
+				<textarea name="Message" placeholder="Message" required></textarea>
+				<input type="submit" value="Soumettre" class="btn btn-primary">
+			</form>
+		</div>
+	</div>
+</section>
+<!-- ============== END OF CONTACT ============== -->{% endblock %}

@@ -1,0 +1,649 @@
+/*ROOT VARIABLES*/
+:root {
+    --color-white: #fff;
+    --color-light: #f4f4f4;
+    --color-dark: #525252;
+    --color-black: #141415;
+    --color-primary: rgb(255, 106, 20);
+    --color-primary-light: hs1(41, 100%, 62%, 12%);
+    --color-secondary: #0000ff;
+    --color-success: #00eaa4;
+    --color-warning: #ffc700;
+    --color-info: #00e5ff;
+    --color-danger: #ff5d00;
+    --color-footer: #00142c;
+
+    --transition: all 300ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-white);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark);
+    max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-black);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 0.86rem;
+}
+
+p {
+    line-height: 1.8;
+}
+
+#progress {
+    background: var(--color-primary);
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background: var(--color-white);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: var(--color-footer);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 10rem 0 7rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+section h1 {
+    text-align: center;
+    display: block;
+    margin-bottom: 5rem;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    padding: 1.4rem 3.4rem;
+    font-size: 1.1rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    display: inline-block;
+    margin: 2rem 0;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    box-shadow: 0 2rem 2rem var(--color-primary-light);
+}
+
+.btn-primary {
+    background: var(--color-light);
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.btn-primary:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 2rem 2rem var(--color-primary-light);
+}
+
+/* ============= NAVBAR ============= */
+nav {
+    width: 100%;
+    height: 6rem;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid var(--color-light);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav .container .logo {
+    position: relative;
+    height: 100%;
+    top: 2;
+}
+
+nav button {
+    display: none;
+}
+
+nav h3 {
+    color: var(--color-primary);
+}
+
+nav .container ul {
+    display: flex;
+    height: 100%;
+}
+
+nav .container ul li a {
+    height: 100%;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-black);
+    transition: var(--transition);
+}
+
+nav .container ul li a:hover {
+    color: var(--color-primary);
+}
+
+nav .container ul li a.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ============= MASTHEAD SECTION ============= */
+
+header {
+    background: url('../img/header-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    top: 5rem;
+    display: grid;
+    place-items: center;
+}
+
+header.masthead .container {
+    display: grid;
+    grid-template-columns: 20rem auto 17rem;
+    align-items: center;
+    max-height: 100%;
+    margin-top: -3rem;
+}
+
+header.masthead .container .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 5rem;
+}
+
+header.masthead .container .socials a {
+    font-size: 1.1rem;
+    background: var(--color-light);
+    color: var(--color-dark);
+    padding: 0.3rem;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+header.masthead .container .socials a:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+}
+
+header.masthead .container .info {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--color-white);
+    padding: 1.5rem 0 0 1.5rem;
+}
+
+header.masthead .container .info h1 {
+    text-align: left;
+    margin: 0;
+}
+
+header.masthead h3 {
+    margin: 2.4rem 0 1rem;
+}
+
+header.masthead .info p {
+    width: 50rem;
+    justify-content: space-between;
+}
+
+header.masthead .container .info h2,
+header.masthead .container .info h3,
+header.masthead .container .info p {
+    color: var(--color-white);
+}
+
+header.masthead .container .info .swiper .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+}
+
+header.masthead .container .info .swiper .swiper-wrapper .swiper-slide {
+    background: rgba(255, 255, 255, 0.6);
+    width: 19rem;
+    padding: 3rem 3rem;
+    border-radius: 0.8rem;
+    place-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    font-weight: 700;
+    display: flex;
+    gap: 1.5rem;
+    transition: var(--transition);
+}
+
+header.masthead .container .info .swiper .swiper-wrapper .swiper-slide:hover {
+    transform: scale(0.9);
+}
+
+/* ============= SERVICES SECTION ============= */
+section.services {
+    background: var(--color-light);
+}
+
+section.services .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+section.services .container .service {
+    background: linear-gradient(0deg, #0000ff 10px, transparent 10px);
+    box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: 0 0.82rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: default;
+    transition: var(--transition);
+}
+
+section.services .container .service:hover {
+    /* box-shadow: 0 3rem 3rem var(--color-primary-light); */
+    background-position: 0;
+}
+
+section.services .container .service span {
+    background: var(--color-primary);
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-white);
+}
+
+section.services .container .service span:before {
+    position: absolute;
+    content: "";
+    width: 5rem;
+    height: 5rem;
+}
+
+section.services .container .service:hover span:before {
+    width: 5rem;
+    width: 5rem;
+    border: 0.25rem solid #0000ff;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+/* section.services .container .service:nth-child(2) span {
+    background: var(--color-warning);
+}
+
+section.services .container .service:nth-child(3) span {
+    background: var(--color-success);
+}
+
+section.services .container .service:nth-child(4) span {
+    background: var(--color-info);
+} */
+
+section.services .container .service ul {
+    list-style: var(--color-black);
+}
+
+section.services .container .service ul li {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    letter-spacing: 0.25em;
+    text-align: left;
+}
+
+section.services .container .service ul li:hover {
+    line-height: 1.7em;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-black);
+}
+
+/* ============= RECENTS WORKS SECTION (PORTFOLIO)============= */
+
+section.recent-work .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+section.recent-work .container .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section.recent-work .container .projects .project {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section.recent-work .container .projects .project .action {
+    display: flex;
+    gap: 2rem;
+}
+
+section.recent-work .container .projects .project .action a {
+    color: var(--color-primary);
+}
+
+section.recent-work .container .projects .project .action a:hover {
+    text-decoration: underline;
+}
+
+/* ============= ABOUT SECTION ============= */
+section.about {
+    background: var(--color-light);
+}
+
+section.about .container {
+    display: grid;
+    grid-template-columns: 26rem auto;
+    gap: 5rem;
+}
+
+section.about p {
+    margin-bottom: 1rem;
+}
+
+section.about .container .read-more-content {
+    display: none;
+}
+
+section.about .container .read-more {
+    display: block;
+    margin: 1rem 0 2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+section.about .container .read-more:hover {
+    text-decoration: underline;
+}
+
+/* ============= BLOG SECTION ============= */
+section.blog .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.date {
+    color: var(--color-danger);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.register {
+    margin-top: 1.8rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+/* ============= CONTACT ============= */
+section.contact {
+    background: url('./images/Burkina_Faso.svg') no-repeat center center/cover;
+    padding: 0;
+    max-width: 100vw;
+}
+
+section.contact .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10rem 0 7rem;
+}
+
+section.contact .container {
+    width: 40%;
+}
+
+section.contact .container h1 {
+    margin: 0;
+    color: var(--color-white);
+}
+
+section.contact .container p {
+    text-align: center;
+    color: var(--color-white);
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+section.contact form {
+    margin-top: 3rem;
+}
+
+section.contact form input,
+section.contact form textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1.6rem;
+    border: 1px solid var(--color-white);
+    background: transparent;
+    color: var(--color-white);
+    transition: var(--transition);
+}
+
+section.contact form textarea {
+    height: 10rem;
+}
+
+section.contact form input:focus,
+section.contact form textarea:focus {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+section.contact form input::placeholder,
+section.contact form textarea::placeholder {
+    color: var(--color-white);
+}
+
+section.contact form .btn {
+    width: 14rem;
+    border: none;
+    background: var(--color-white);
+    color: var(--color-black);
+    margin: 2rem auto 0;
+}
+
+section.contact form .btn:hover {
+    background: var(--color-primary);
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+/* ========= FOOTER ==========*/
+footer {
+    background: var(--color-footer);
+    margin-top: 8rem;
+    padding-top: 5rem;
+    font-size: 0.9rem;
+    color: var(--color-light);
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+footer .container h4 {
+    color: var(--color-white);
+    margin-bottom: 1.6rem;
+}
+
+footer .container .f1 .logo {
+    width: 6rem;
+}
+
+footer .container .f1 p {
+    margin: 1rem 0 2rem;
+}
+
+footer .container .f1 .subscribe {
+    border: 1px solid var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+footer .container .f1 .subscribe input {
+    background: transparent;
+    color: var(--color-white);
+    margin-left: 1rem;
+}
+
+footer .container .f1 .subscribe input::placeholder {
+    color: var(--color-light);
+}
+
+footer .container .f1 .subscribe button {
+    background: var(--color-white);
+    columns: var(--color-black);
+    transition: all300ms ease;
+    width: 3rem;
+    height: 100%;
+    font-size: 1.3rem;
+}
+
+footer .container .f1 .subscribe button:hover {
+    background: var(--color-light);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+footer .container ul li {
+    margin-bottom: 1rem;
+}
+
+footer .container ul li a {
+    color: var(--color-light);
+}
+
+footer .container ul li a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+footer .container .f3 span {
+    vertical-align: middle;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    margin-right: 0.8rem;
+}
+
+footer .container .f4 p {
+    margin-bottom: 1.6rem;
+}
+
+footer .container .socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    color: var(--color-white);
+    border-top: 1px solid var(--color-white);
+}
